@@ -13,6 +13,10 @@
   padding: 10px;
 }
 
+.p-15{
+  padding: 15px;
+}
+
 .p-20{
   padding: 20px;
 }
@@ -22,6 +26,14 @@
 }
 
 /* End padding and margin */
+
+/* Start Width and Height */
+.w-full{
+  width: 100%;
+}
+
+
+/* End Width and Height */
 
 /* Start color */
 .bg-white{
@@ -55,3 +67,11 @@
   border-radius: 6px;
 }
 /* End Border */
+
+/* Start components */
+.between-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* End components */
