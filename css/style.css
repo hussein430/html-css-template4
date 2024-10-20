@@ -34,6 +34,22 @@ ul {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+
 .page {
   background-color: #f1f5f9;
   min-height: 100vh;
@@ -107,11 +123,11 @@ ul {
 /* End the sidebar */
 
 /* Start Content Head */
-.content{
+.content {
   overflow: hidden;
 }
 
-.head .search::before{
+.head .search::before {
   content: "";
   font-family: "Font Awesome 6 Free";
   content: "\f002";
@@ -124,7 +140,7 @@ ul {
   color: var(--grey-color);
 }
 
-.head .search input{
+.head .search input {
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-left: 5px;
@@ -133,36 +149,203 @@ ul {
   transition: width 0.3s;
 }
 
-.head .search input:focus{
+.head .search input:focus {
   width: 200px;
 }
 
-.head .search input:focus::placeholder{
+.head .search input:focus::placeholder {
   opacity: 0;
 }
 
-.head .icons .notification{
+.head .icons .notification {
   cursor: pointer;
 }
 
-.head .icons .notification::before{
+.head .icons .notification::before {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
   background-color: var(--red-color);
   border-radius: 50%;
-  right: -5px ;
+  right: -5px;
   top: -5px;
-
 }
 
-.head .icons img{
+.head .icons img {
   cursor: pointer;
   width: 32px;
   height: 32px;
   margin-left: 15px;
 }
 
+.page h1 {
+  margin: 20px 20px 40px;
+}
+
+.page h1::before,
+.page h1::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.page h1::before {
+  background-color: white;
+  width: 120px;
+}
+
+.page h1::after {
+  background-color: black;
+  width: 40px;
+}
+
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
 
 /* End Content Head */
+
+/* Start Welcome Widget */
+.welcome{
+  overflow: hidden;
+}
+
+.welcome .intro img{
+width: 200px;
+margin-bottom: -10px;
+}
+
+.welcome .avatar{
+  width: 64px;
+  height: 64px;
+   border: 2px solid white;
+   border-radius: 50%;
+   padding: 2px;
+   box-shadow: 0 0 5px #ddd;
+   margin-left: 20px;
+   margin-top: -32px;
+}
+
+.welcome .body {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.welcome .body > div {
+  flex: 1;
+}
+
+.welcome .visit{
+  margin: 0 15px 15px auto;
+}
+
+@media (max-width: 767px) {
+  .welcome .intro{
+    padding-bottom: 30px;
+  }
+
+  .welcome .avatar{
+    margin-left: 0;
+  }
+
+  .welcome .body > div:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+/* End Welcome Widget */
+
+/* Start Quick Draft Widget */
+.quick-draft textarea{
+  resize: none;
+  min-height: 180px;
+}
+
+.quick-draft .save{
+  margin-left: auto;
+}
+/* End Quick Draft Widget */
+
+/* Start Targets */
+.targets .target-row .icon{
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.targets .details{
+  flex: 1;
+}
+
+.targets .details .progress{
+  height: 4px;
+}
+
+.targets .details .progress > span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.targets .details .progress > span span{
+  position: absolute;
+  bottom: 16px;
+  right: -16px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.targets .details .progress > span span::after{
+  content: "";
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.targets .details .progress > .blue span::after{
+  border-top-color: var(--blue-color);
+}
+
+.targets .details .progress > .orange span::after{
+  border-top-color: var(--orange-color);
+}
+
+.targets .details .progress > .green span::after{
+  border-top-color: var(--green-color);
+}
+
+.blue .icon , 
+.blue .progress{
+  background-color: rgb(0 117 255 / 20%);
+}
+
+.orange .icon , 
+.orange .progress{
+  background-color: rgb(245 158 11 / 20%);
+}
+
+.green .icon , 
+.green .progress{
+  background-color: rgb(34 197 94 / 20%); 
+}
+/* End Targets */
