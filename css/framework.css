@@ -249,6 +249,10 @@
   border: none;
 }
 
+.border-ccc{
+  border: 1px solid #ccc;
+}
+
 .rad-6 {
   border-radius: 6px;
 }
