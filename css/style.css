@@ -644,12 +644,12 @@ ul {
 
 /* Start Settings */
 
-.settings-page{
+.settings-page {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
 @media (max-width: 767px) {
-  .settings-page{
+  .settings-page {
     grid-template-columns: minmax(500px, 1fr);
     margin-left: 10px;
     margin-right: 10px;
@@ -657,24 +657,123 @@ ul {
   }
 }
 
-.settings-page .close-message{
+.settings-page .close-message {
   border: 1px solid #ccc;
   resize: none;
   min-height: 150px;
 }
 
-.settings-page .email{
+.settings-page .email {
   display: inline-flex;
   width: calc(100% - 80px);
 }
 
-.toggle-checkbox{
+.settings-page .sec-box {
+  padding-bottom: 15px;
+}
+
+.settings-page .sec-box:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.settings-page .sec-box .button {
+  transition: 0.3s;
+}
+
+.settings-page .sec-box .button:hover {
+  background-color: var(--blue-alt-color);
+}
+
+.settings-page .social-boxes i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-page .social-boxes input {
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* 
+:focus-within يعني:
+إذا كان العنصر نفسه أو أي عنصر داخله قد حصل على التركيز (مثل عندما تضغط عليه أو تدخل فيه باستخدام لوحة المفاتيح)، سيتم تطبيق التنسيقات المطلوبة.
+*/
+
+.settings-page .social-boxes > div:focus-within i {
+  color: black;
+}
+
+.widgets-control .control input[type= "checkbox"]{
   appearance: none;
   display: none;
   -webkit-appearance: none;
 }
 
-.toggle-switch{
+.widgets-control .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.widgets-control .control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color) ;
+  margin-top: -9px;
+}
+
+
+.widgets-control .control label:hover::before{
+  border-color: var(--blue-alt-color);
+}
+
+.widgets-control .control label::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+  
+}
+
+.widgets-control .control input[type= "checkbox"]:checked + label::after{
+  transform: scale(1);
+}
+
+.toggle-checkbox {
+  appearance: none;
+  display: none;
+  -webkit-appearance: none;
+}
+
+.toggle-switch {
   background-color: #ccc;
   width: 78px;
   height: 32px;
@@ -684,7 +783,7 @@ ul {
   cursor: pointer;
 }
 
-.toggle-switch::before{
+.toggle-switch::before {
   font-family: "Font Awesome 6 Free";
   content: "\f00d";
   font-weight: 900;
@@ -702,14 +801,21 @@ ul {
   transition: 0.3s;
 }
 
-.toggle-checkbox:checked + .toggle-switch{
+.toggle-checkbox:checked + .toggle-switch {
   background-color: var(--blue-color);
 }
 
-.toggle-checkbox:checked + .toggle-switch::before{
+.toggle-checkbox:checked + .toggle-switch::before {
   content: "\f00c";
   color: var(--green-color);
   left: 50px;
+  color: var(--blue-color);
+}
+
+.settings-page :disabled {
+  cursor: no-drop;
+  background-color: #f0f4f8;
+  color: #bbb;
 }
 /* End Settings */
 
