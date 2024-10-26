@@ -1034,6 +1034,231 @@ ul {
 }
 /* End Profile Page */
 
+/* Start Projects Page */
+.projects-page{
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .projects-page{
+    grid-template-columns: minmax(200px , 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+.projects-page .project .date{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.projects-page .project h4{
+  font-weight: normal;
+}
+
+.projects-page .project .team{
+  position: relative;
+  min-height: 80px;
+}
+
+.projects-page .project .team a{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.projects-page .project .team a:nth-child(2){
+  left: 25px;
+}
+
+.projects-page .project .team a:nth-child(3){
+  left: 50px;
+}
+
+.projects-page .project .team a:nth-child(4){
+  left: 75px;
+}
+
+.projects-page .project .team a:nth-child(5){
+  left: 100px;
+}
+
+.projects-page .project .team a:hover{
+  z-index: 100;
+}
+
+.projects-page .project .team img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.projects-page .project .do{
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.projects-page .project .do span{
+  padding: 3px 8px;
+  margin-left: 5px;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .projects-page .project .do{
+    flex-direction: column;
+  }
+
+  .projects-page .project .do span:not(:last-child){
+    margin-bottom: 15px;
+  }
+}
+
+.projects-page .project .info{
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .projects-page .project .info{
+    flex-direction: column;
+  }
+}
+
+.projects-page .project .prog{
+  height: 8px;
+  width: 260px;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .projects-page .project .prog{
+    margin-bottom: 15px;
+  }
+}
+
+.projects-page .project .prog span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 6px;
+}
+/* End Projects Page */
+
+/* Start Course Page */
+.courses-page{
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .courses-page{
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+.courses-page .course{
+  overflow: hidden;
+}
+
+.courses-page .course .cover{
+  max-width: 100%;
+}
+
+.courses-page .course .instructor{
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  border: 2px solid white;
+}
+
+.courses-page .course .description{
+  line-height: 1.8;
+}
+
+.courses-page .course .info{
+  border-top: 1px solid #eee;
+}
+
+.courses-page .course .info .title{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 28px;
+}
+/* End Course Page */
+
+/* Start Friends Page */
+.friends-page{
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .friends-page{
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+.friends-page .contact{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.friends-page .contact i{
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 50%;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.friends-page .contact i:hover{
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.friends-page .friend .icons{
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.friends-page .friend .icons i{
+  margin-right: 5px;
+}
+
+.friends-page .friend .icons .vip{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  opacity: 0.2;
+}
+/* End Friends Page */
+
 /* Start animation */
 @keyframes change-color {
   from {
