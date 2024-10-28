@@ -12,7 +12,7 @@
   display: flex;
 }
 
-.f-wrap{
+.f-wrap {
   flex-wrap: wrap;
 }
 
@@ -32,7 +32,7 @@
   gap: 20px;
 }
 
-.d-block{
+.d-block {
   display: block;
 }
 
@@ -40,7 +40,7 @@
   .block-mobile {
     display: block;
   }
-  .hide-mobile{
+  .hide-mobile {
     display: none;
   }
 }
@@ -59,31 +59,35 @@
   padding: 20px;
 }
 
-.pt-15{
+.pt-10{
+  padding-top: 10px;
+}
+
+.pt-15 {
   padding-top: 15px;
 }
 
-.pt-20{
+.pt-20 {
   padding-top: 20px;
 }
 
-.pb-10{
+.pb-10 {
   padding-bottom: 10px;
 }
 
-.pb-15{
+.pb-15 {
   padding-bottom: 15px;
 }
 
-.pb-20{
+.pb-20 {
   padding-bottom: 20px;
 }
 
-.pl-15{
+.pl-15 {
   padding-left: 15px;
 }
 
-.m-15{
+.m-15 {
   margin: 15px;
 }
 
@@ -95,11 +99,11 @@
   margin-top: 5px;
 }
 
-.mt-10{
+.mt-10 {
   margin-top: 10px;
 }
 
-.mt-15{
+.mt-15 {
   margin-top: 15px;
 }
 
@@ -111,23 +115,23 @@
   margin-top: 25px;
 }
 
-.mr-10{
+.mr-10 {
   margin-right: 10px;
 }
 
-.mr-15{
+.mr-15 {
   margin-right: 15px;
 }
 
-.mb-5{
+.mb-5 {
   margin-bottom: 5px;
 }
 
-.mb-10{
+.mb-10 {
   margin-bottom: 10px;
 }
 
-.mb-15{
+.mb-15 {
   margin-bottom: 15px;
 }
 
@@ -135,18 +139,18 @@
   margin-bottom: 20px;
 }
 
-.mb-25{
+.mb-25 {
   margin-bottom: 25px;
 }
 
 /* End padding and margin */
 
 /* Start Width and Height */
-.w-100{
+.w-100 {
   width: 100px;
 }
 
-.h-100{
+.h-100 {
   height: 100px;
 }
 
@@ -154,11 +158,11 @@
   width: 100%;
 }
 
-.h-full{
+.h-full {
   height: 100%;
 }
 
-.w-fit{
+.w-fit {
   width: fit-content;
 }
 
@@ -173,39 +177,39 @@
   background-color: #eee;
 }
 
-.bg-blue{
+.bg-blue {
   background-color: var(--blue-color);
 }
 
-.bg-orange{
-   background-color: var(--orange-color);
+.bg-orange {
+  background-color: var(--orange-color);
 }
 
-.bg-green{
+.bg-green {
   background-color: var(--green-color);
 }
 
-.bg-red{
-  background-color: var(--red-color)
+.bg-red {
+  background-color: var(--red-color);
 }
 
 .c-black {
   color: black;
 }
 
-.c-white{
+.c-white {
   color: white;
 }
 
-.c-blue{
+.c-blue {
   color: var(--blue-color);
 }
 
-.c-green{
+.c-green {
   color: green;
 }
 
-.c-orange{
+.c-orange {
   color: var(--orange-color);
 }
 
@@ -222,6 +226,10 @@
 .p-relative {
   position: relative;
 }
+
+p-absolute{
+  position: absolute;
+}
 /* End position */
 
 /* Start font */
@@ -229,7 +237,7 @@
   text-align: center;
 }
 
-.fw-bold{
+.fw-bold {
   font-weight: bold;
 }
 
@@ -257,11 +265,11 @@
 /* End font */
 
 /* Start Border */
-.b-none{
+.b-none {
   border: none;
 }
 
-.border-ccc{
+.border-ccc {
   border: 1px solid #ccc;
 }
 
@@ -273,14 +281,14 @@
   border-radius: 10px;
 }
 
-.rad-half{
+.rad-half {
   border-radius: 50%;
 }
 /* End Border */
 
 /* Start components */
-.center-flex{
-  display: flex;
+.center-flex {
+  display: flex !important;
   justify-content: center;
   align-items: center;
 }
@@ -291,10 +299,9 @@
   align-items: center;
 }
 
-.btn-shape{
+.btn-shape {
   padding: 4px 10px;
   border-radius: 6px;
   cursor: pointer;
 }
 /* End components */
-
